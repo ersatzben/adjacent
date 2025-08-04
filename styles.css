@@ -295,7 +295,7 @@ nav a:hover {
 /* Section Headings */
 .about h3,
 .updates h3,
-.contact h3 {
+.connect h3 {
     font-size: var(--font-size-h2);
     font-weight: var(--font-weight-semibold);
     color: var(--color-primary);
@@ -336,52 +336,54 @@ nav a:hover {
     text-decoration: underline;
 }
 
-/* Contact Section */
-.contact {
+/* Connect Section */
+.connect {
     background: var(--color-background);
     text-align: center;
 }
 
-.contact-info {
-    max-width: 600px;
+.connect-links {
+    display: flex;
+    justify-content: center;
+    gap: var(--space-lg);
+    flex-wrap: nowrap;
+    max-width: 500px;
     margin: 0 auto;
 }
 
-.contact-info p {
-    font-size: var(--font-size-body);
-    font-weight: var(--font-weight-normal);
-    margin-bottom: var(--space-lg);
-    letter-spacing: var(--letter-spacing-wider);
-}
-
-.contact-info a {
+.connect-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--space-xs);
     color: var(--color-primary);
     text-decoration: none;
-    font-weight: var(--font-weight-semibold);
-    transition: opacity var(--transition-normal);
+    padding: var(--space-sm);
+    border-radius: var(--radius-md);
+    transition: all var(--transition-normal);
+    min-width: 70px;
 }
 
-.contact-info a:hover {
-    opacity: 0.7;
+.connect-item:hover {
+    background: var(--color-background-alt);
+    transform: translateY(-2px);
 }
 
-.social-links {
-    font-size: var(--font-size-body);
-    font-weight: var(--font-weight-normal);
+.connect-item svg {
+    width: 32px;
+    height: 32px;
+    color: var(--color-primary);
+    transition: color var(--transition-normal);
+}
+
+.connect-item:hover svg {
     color: var(--color-text);
-    letter-spacing: var(--letter-spacing-wider);
 }
 
-.social-links a {
-    margin: 0 var(--space-sm);
-    color: var(--color-primary);
+.connect-item span {
+    font-size: var(--font-size-small);
     font-weight: var(--font-weight-normal);
-    text-decoration: none;
-    transition: opacity var(--transition-normal);
-}
-
-.social-links a:hover {
-    opacity: 0.7;
+    letter-spacing: var(--letter-spacing-wider);
 }
 
 /* Footer */
@@ -461,8 +463,18 @@ button:focus {
         padding: 0 var(--space-sm);
     }
     
-    .social-links a {
-        display: inline-block;
-        margin: var(--space-xs);
+    .connect-links {
+        gap: var(--space-sm);
+        flex-wrap: wrap;
+    }
+    
+    .connect-item {
+        min-width: 60px;
+        padding: var(--space-xs);
+    }
+    
+    .connect-item svg {
+        width: 28px;
+        height: 28px;
     }
 }
