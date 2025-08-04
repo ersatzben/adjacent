@@ -174,7 +174,7 @@ nav a:hover {
 /* Services Section */
 .services {
     background: var(--color-background-alt);
-    background-image: url('network-bg.svg');
+    background-image: url('network.png');
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
@@ -189,8 +189,8 @@ nav a:hover {
     left: 0;
     right: 0;
     bottom: 0;
-    background: var(--color-background-alt);
-    opacity: 0.7;
+    background: var(--color-background);
+    opacity: 0.5;
     pointer-events: none;
 }
 
