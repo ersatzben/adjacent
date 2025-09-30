@@ -13,12 +13,13 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
 </head>
 <body>
     <header>
         <div class="container">
             <a href="index.html" class="logo">
-                <img src="logo.png" alt="Adjacent Science logo" class="logo-img">
+                <img src="logo.svg" alt="Adjacent Science logo" class="logo-img">
             </a>
             <nav role="navigation" aria-label="Main navigation">
                 <a href="#services">Services</a>
@@ -71,9 +72,22 @@
                     <article class="leadership">
                         <h4>Leadership</h4>
                         <div class="leader-profile">
-                            <p>Adjacent Science is led by Ben Johnson. Ben is Professor of Practice in Research and Innovation Policy at the University of Strathclyde and heads the science policy work of the Centre for British Progress. From 2019-2024, Ben was senior policy adviser to the UK Minister of State for Universities and Science and later the Secretary of State for Science, Innovation and Technology. He has held a number of roles in both the civil service and in UK research funding agencies since 2009.</p>
+                            <p>Adjacent Science is led by Ben Johnson. Ben is Professor of Practice in Research and Innovation Policy at the University of Strathclyde. From 2019-2024, Ben was senior policy adviser to the UK Minister of State for Universities and Science and later the Secretary of State for Science, Innovation and Technology. Before then, he held a number of roles in both the civil service and in UK research funding agencies since 2009. Ben undertakes occasional work for think-tanks including the Tony Blair Institute and the Centre for British Progress.</p>
                         </div>
                     </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="recent-posts">
+            <div class="container">
+                <h3>Recent Writing</h3>
+                <p class="section-intro">Latest insights and analysis from <a href="https://ersatzben.com/" target="_blank" rel="noopener">Ben's Substack</a></p>
+                <div class="posts-grid">
+                    <!-- Posts will be dynamically loaded here -->
+                </div>
+                <div class="view-all">
+                    <a href="https://ersatzben.com/archive" target="_blank" rel="noopener" class="view-all-link">View all posts →</a>
                 </div>
             </div>
         </section>
@@ -96,6 +110,12 @@
                         </svg>
                         <span>Email</span>
                     </a>
+                    <a href="https://github.com/ersatzben" target="_blank" rel="noopener" class="connect-item" aria-label="View Ben Johnson's GitHub">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                        </svg>
+                        <span>GitHub</span>
+                    </a>
                     <a href="https://www.linkedin.com/in/ben-johnson-aa9195192/" target="_blank" rel="noopener" class="connect-item" aria-label="Connect with Ben Johnson on LinkedIn">
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
                             <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
@@ -113,12 +133,6 @@
                             <path d="M12 10.8c-1.087-2.114-4.046-6.053-6.798-7.995C2.566.944 1.561 1.266.902 2.105.139 3.107.139 5.656 1.003 8.196c.864 2.54 2.303 5.751 4.582 6.139.224.038.456.054.688.054-.688-.395-1.494-1.086-1.813-2.314-.318-1.228-.133-2.458.133-3.498.266-1.04.798-1.946 1.594-2.580C7.097 5.465 8.796 5.465 10.706 6.8c1.91 1.335 3.284 3.6 1.294 4.000zm0 0c1.087-2.114 4.046-6.053 6.798-7.995C21.434.944 22.439 1.266 23.098 2.105c.763 1.002.763 3.551-.101 6.091-.864 2.54-2.303 5.751-4.582 6.139-.224.038-.456.054-.688.054.688-.395 1.494-1.086 1.813-2.314.318-1.228.133-2.458-.133-3.498-.266-1.04-.798-1.946-1.594-2.580C16.903 5.465 15.204 5.465 13.294 6.8c-1.91 1.335-3.284 3.6-1.294 4.000z"/>
                         </svg>
                         <span>Bluesky</span>
-                    </a>
-                    <a href="https://ersatzben.com/" target="_blank" rel="noopener" class="connect-item" aria-label="Subscribe to Ben's Substack">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-                            <path d="M22.539 8.242H1.46V5.406h21.08v2.836zM1.46 10.812V24L12 18.11 22.54 24V10.812H1.46zM22.54 0H1.46v2.836h21.08V0z"/>
-                        </svg>
-                        <span>Substack</span>
                     </a>
                 </div>
             </div>
