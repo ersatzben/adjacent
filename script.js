@@ -1,7 +1,59 @@
 /**
- * Adjacent Science - Substack Feed Loader
- * Dynamically fetches and displays recent posts from Ben's Substack
+ * Adjacent Science - Main Scripts
+ * Handles dark mode toggle and Substack feed loading
  */
+
+// ===== DARK MODE TOGGLE =====
+
+/**
+ * Initialize dark mode based on user preference
+ */
+function initDarkMode() {
+    const savedTheme = localStorage.getItem('theme');
+    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+
+    if (savedTheme === 'dark' || (!savedTheme && prefersDark)) {
+        document.documentElement.setAttribute('data-theme', 'dark');
+    }
+
+    updateThemeIcon();
+}
+
+/**
+ * Toggle between light and dark mode
+ */
+function toggleTheme() {
+    const currentTheme = document.documentElement.getAttribute('data-theme');
+    const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+
+    if (newTheme === 'dark') {
+        document.documentElement.setAttribute('data-theme', 'dark');
+        localStorage.setItem('theme', 'dark');
+    } else {
+        document.documentElement.removeAttribute('data-theme');
+        localStorage.setItem('theme', 'light');
+    }
+
+    updateThemeIcon();
+}
+
+/**
+ * Update the theme toggle icon
+ */
+function updateThemeIcon() {
+    const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+    const themeToggle = document.getElementById('theme-toggle');
+
+    if (themeToggle) {
+        if (isDark) {
+            themeToggle.setAttribute('aria-label', 'Switch to light mode');
+        } else {
+            themeToggle.setAttribute('aria-label', 'Switch to dark mode');
+        }
+    }
+}
+
+// ===== SUBSTACK FEED LOADER =====
 
 const SUBSTACK_FEED_URL = 'https://www.ersatzben.com/feed';
 const MAX_POSTS = 4;
@@ -241,8 +293,22 @@ async function initSubstackFeed() {
 }
 
 // Initialize when DOM is ready
-if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', initSubstackFeed);
-} else {
+function init() {
+    // Initialize dark mode immediately (before DOM is fully loaded for faster rendering)
+    initDarkMode();
+
+    // Set up theme toggle button
+    const themeToggle = document.getElementById('theme-toggle');
+    if (themeToggle) {
+        themeToggle.addEventListener('click', toggleTheme);
+    }
+
+    // Initialize Substack feed
     initSubstackFeed();
+}
+
+if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', init);
+} else {
+    init();
 }

@@ -2,16 +2,16 @@
   <!-- Network nodes concept - represents connection and adjacency -->
   <g id="icon">
     <!-- Main nodes -->
-    <circle cx="28" cy="40" r="6" fill="#0066cc"/>
-    <circle cx="52" cy="28" r="5" fill="#0066cc"/>
-    <circle cx="52" cy="52" r="5" fill="#f59e0b"/>
-    <circle cx="70" cy="40" r="4" fill="#f59e0b"/>
+    <circle cx="28" cy="40" r="6" fill="#4d9fff"/>
+    <circle cx="52" cy="28" r="5" fill="#4d9fff"/>
+    <circle cx="52" cy="52" r="5" fill="#fbbf24"/>
+    <circle cx="70" cy="40" r="4" fill="#fbbf24"/>
 
     <!-- Connecting lines with gradient -->
     <defs>
       <linearGradient id="lineGradient" x1="0%" y1="0%" x2="100%" y2="0%">
-        <stop offset="0%" style="stop-color:#0066cc;stop-opacity:1" />
-        <stop offset="100%" style="stop-color:#f59e0b;stop-opacity:1" />
+        <stop offset="0%" style="stop-color:#4d9fff;stop-opacity:1" />
+        <stop offset="100%" style="stop-color:#fbbf24;stop-opacity:1" />
       </linearGradient>
     </defs>
 
@@ -22,6 +22,6 @@
   </g>
 
   <!-- Text -->
-  <text x="90" y="42" font-family="Inter, sans-serif" font-size="24" font-weight="600" fill="#1a1a1a" letter-spacing="-0.5">Adjacent</text>
-  <text x="90" y="60" font-family="Inter, sans-serif" font-size="16" font-weight="400" fill="#4a4a4a" letter-spacing="0.5">SCIENCE</text>
+  <text x="90" y="42" font-family="Inter, sans-serif" font-size="24" font-weight="600" fill="#e5e7eb" letter-spacing="-0.5">Adjacent</text>
+  <text x="90" y="60" font-family="Inter, sans-serif" font-size="16" font-weight="400" fill="#d1d5db" letter-spacing="0.5">SCIENCE</text>
 </svg>
