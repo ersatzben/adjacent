@@ -2,26 +2,26 @@
   <!-- Network nodes concept - represents connection and adjacency -->
   <g id="icon">
     <!-- Main nodes -->
-    <circle cx="28" cy="40" r="6" fill="#0066cc"/>
-    <circle cx="52" cy="28" r="5" fill="#0066cc"/>
-    <circle cx="52" cy="52" r="5" fill="#f59e0b"/>
-    <circle cx="70" cy="40" r="4" fill="#f59e0b"/>
+    <circle cx="28" cy="40" r="6" fill="#A044E3"/>
+    <circle cx="52" cy="28" r="5" fill="#A044E3"/>
+    <circle cx="52" cy="52" r="5" fill="#E73FB3"/>
+    <circle cx="70" cy="40" r="4" fill="#E73FB3"/>
 
     <!-- Connecting lines with gradient -->
     <defs>
       <linearGradient id="lineGradient" x1="0%" y1="0%" x2="100%" y2="0%">
-        <stop offset="0%" style="stop-color:#0066cc;stop-opacity:1" />
-        <stop offset="100%" style="stop-color:#f59e0b;stop-opacity:1" />
+        <stop offset="0%" style="stop-color:#A044E3;stop-opacity:1" />
+        <stop offset="100%" style="stop-color:#E73FB3;stop-opacity:1" />
       </linearGradient>
     </defs>
 
-    <line x1="28" y1="40" x2="52" y2="28" stroke="url(#lineGradient)" stroke-width="2" opacity="0.4"/>
-    <line x1="28" y1="40" x2="52" y2="52" stroke="url(#lineGradient)" stroke-width="2" opacity="0.4"/>
-    <line x1="52" y1="28" x2="70" y2="40" stroke="url(#lineGradient)" stroke-width="2" opacity="0.4"/>
-    <line x1="52" y1="52" x2="70" y2="40" stroke="url(#lineGradient)" stroke-width="2" opacity="0.4"/>
+    <line x1="28" y1="40" x2="52" y2="28" stroke="url(#lineGradient)" stroke-width="2" opacity="0.5"/>
+    <line x1="28" y1="40" x2="52" y2="52" stroke="url(#lineGradient)" stroke-width="2" opacity="0.5"/>
+    <line x1="52" y1="28" x2="70" y2="40" stroke="url(#lineGradient)" stroke-width="2" opacity="0.5"/>
+    <line x1="52" y1="52" x2="70" y2="40" stroke="url(#lineGradient)" stroke-width="2" opacity="0.5"/>
   </g>
 
   <!-- Text -->
-  <text x="90" y="42" font-family="Inter, sans-serif" font-size="24" font-weight="600" fill="#1a1a1a" letter-spacing="-0.5">Adjacent</text>
-  <text x="90" y="60" font-family="Inter, sans-serif" font-size="16" font-weight="400" fill="#4a4a4a" letter-spacing="0.5">SCIENCE</text>
+  <text x="90" y="42" font-family="IBM Plex Sans, Inter, sans-serif" font-size="24" font-weight="600" fill="#EAE2FF" letter-spacing="-0.5">Adjacent</text>
+  <text x="90" y="60" font-family="IBM Plex Sans, Inter, sans-serif" font-size="16" font-weight="400" fill="#B5A8E0" letter-spacing="0.5">SCIENCE</text>
 </svg>

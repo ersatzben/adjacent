@@ -1,28 +1,32 @@
 <svg width="128" height="128" viewBox="0 0 128 128" fill="none" xmlns="http://www.w3.org/2000/svg">
   <!-- Background -->
-  <rect width="128" height="128" rx="24" fill="#0066cc"/>
+  <rect width="128" height="128" rx="24" fill="#0D0820"/>
 
   <!-- Network nodes concept - simplified for favicon -->
   <defs>
     <linearGradient id="nodeGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:#ffffff;stop-opacity:1" />
-      <stop offset="100%" style="stop-color:#00b8d4;stop-opacity:1" />
+      <stop offset="0%" style="stop-color:#A044E3;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#E73FB3;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="lineGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#A044E3;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#E73FB3;stop-opacity:1" />
     </linearGradient>
   </defs>
 
   <!-- Main nodes -->
-  <circle cx="40" cy="64" r="10" fill="white"/>
-  <circle cx="70" cy="45" r="8" fill="white" opacity="0.9"/>
-  <circle cx="70" cy="83" r="8" fill="white" opacity="0.9"/>
-  <circle cx="95" cy="64" r="7" fill="#00b8d4"/>
+  <circle cx="40" cy="64" r="10" fill="#A044E3"/>
+  <circle cx="70" cy="45" r="8" fill="#A044E3" opacity="0.9"/>
+  <circle cx="70" cy="83" r="8" fill="#E73FB3" opacity="0.9"/>
+  <circle cx="95" cy="64" r="7" fill="#E73FB3"/>
 
   <!-- Connecting lines -->
-  <line x1="40" y1="64" x2="70" y2="45" stroke="white" stroke-width="3" opacity="0.5" stroke-linecap="round"/>
-  <line x1="40" y1="64" x2="70" y2="83" stroke="white" stroke-width="3" opacity="0.5" stroke-linecap="round"/>
-  <line x1="70" y1="45" x2="95" y2="64" stroke="white" stroke-width="3" opacity="0.5" stroke-linecap="round"/>
-  <line x1="70" y1="83" x2="95" y2="64" stroke="white" stroke-width="3" opacity="0.5" stroke-linecap="round"/>
+  <line x1="40" y1="64" x2="70" y2="45" stroke="url(#lineGradient)" stroke-width="3" opacity="0.6" stroke-linecap="round"/>
+  <line x1="40" y1="64" x2="70" y2="83" stroke="url(#lineGradient)" stroke-width="3" opacity="0.6" stroke-linecap="round"/>
+  <line x1="70" y1="45" x2="95" y2="64" stroke="url(#lineGradient)" stroke-width="3" opacity="0.6" stroke-linecap="round"/>
+  <line x1="70" y1="83" x2="95" y2="64" stroke="url(#lineGradient)" stroke-width="3" opacity="0.6" stroke-linecap="round"/>
 
   <!-- Subtle additional node -->
-  <circle cx="33" cy="45" r="5" fill="white" opacity="0.7"/>
-  <line x1="33" y1="45" x2="40" y2="64" stroke="white" stroke-width="2" opacity="0.4" stroke-linecap="round"/>
+  <circle cx="33" cy="45" r="5" fill="#4FC1E9" opacity="0.8"/>
+  <line x1="33" y1="45" x2="40" y2="64" stroke="#4FC1E9" stroke-width="2" opacity="0.5" stroke-linecap="round"/>
 </svg>
